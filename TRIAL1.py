@@ -69,6 +69,7 @@ def encrypt(textfile, passcode):
     #LOCK CREATED
     #so we build our lock with these variables.
     base=os.path.basename(textfile)
+    #we will use this os module so its good to keep it short as a global var.
 
     
     # File Existence Check:
@@ -102,7 +103,9 @@ def encrypt(textfile, passcode):
             content =padded.read()
             padded_file=pad_file(content)
             encrypted_message=lock.encrypt(padded_file)
+            #below, creating the extension to extend the original file after process.
             ext=base.split('.')[1]
+            #copying the original file under the name of file_original.ext 
             shutil.copyfile(base, base.split('.')[0] + '_original.'+ ext)
             
 
