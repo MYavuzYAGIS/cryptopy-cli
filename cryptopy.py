@@ -56,8 +56,8 @@ def encrypt(textfile, passcode):
     #CBC mode is ciphertext block chaining mode. takes cryptographic key and a mode and IV. IV can be none.
     #If IV is not given, it will create one randomly. 
     
-    IV= Random.new().read(16)
-    #IV= 16 * b'\x00'
+    #IV= Random.new().read(16)
+    IV= 16 * b'\x00'
 
     # Converted it into bytes in order to escape from TypeError 
     # TypeError: Object type <class 'str'> cannot be passed to C code
@@ -69,7 +69,6 @@ def encrypt(textfile, passcode):
     #LOCK CREATED
     #so we build our lock with these variables.
     base=os.path.basename(textfile)
-    #we will use this os module so its good to keep it short as a global var.
 
     
     # File Existence Check:
@@ -103,9 +102,7 @@ def encrypt(textfile, passcode):
             content =padded.read()
             padded_file=pad_file(content)
             encrypted_message=lock.encrypt(padded_file)
-            #below, creating the extension to extend the original file after process.
             ext=base.split('.')[1]
-            #copying the original file under the name of file_original.ext 
             shutil.copyfile(base, base.split('.')[0] + '_original.'+ ext)
             
 
@@ -125,7 +122,7 @@ def encrypt(textfile, passcode):
     # Ask user whether to keep the original file or to remove it after the encryption.:
     if os.path.isfile(base.split('.')[0] + '_original.'+ ext):
         print('Do you want to keep the original file,  %s? (Y)es or (N)o ?' %(base.split('.')[0] + '_original.'+ ext))
-        response = input('> ')
+        response = input('>  ')
     if not response.lower().startswith('y'):
         os.remove(base.split('.')[0] + '_original.'+ ext)
     else:
@@ -138,12 +135,12 @@ def encrypt(textfile, passcode):
 
 ############################ Decryption Script ###############################
 @main.command('decrypt')
-@click.argument('textfile')
+@click.argument('enc_item')
 @click.argument('passcode')
 # Encryption function takes two arguments : a textfile to read from and a passcode for auth.
-def decrypt(textfile, passcode):
+def decrypt(enc_item, passcode):
     '''Requires a textfile(starting with enc_) and a keyword for auth'''
-    click.echo("=====Let's Roll Back :)!====")
+    click.echo("==================Let's Roll Back :)!=============")
     # We have to create the unlocker, basically its the same lock we used when defining encryption.
     passcode=passcode.encode()
     # We accepted the passcode as passcode and encoded it to password
@@ -154,49 +151,51 @@ def decrypt(textfile, passcode):
     #the mode, which is a constant and gives the mode of encryption
     #CBC mode is ciphertext block chaining mode. takes cryptographic key and a mode and IV. IV can be none.
     #If IV is not given, it will create one randomly. 
-    IV= Random.new().read(16)
+    #IV= Random.new().read(16)
+    IV= 16 * b'\x00'
     #IV SET.
     #as the last prerequisite, the initialization vector is defined since the
     #encryption requires a pass a mode to encrypt it and a IV.
-    unlock = AES.new(key, mode, IV)
+    unlock = AES.new(key, mode, IV=IV)
     #LOCK CREATED
     #so we build our lock with these variables.
     # File Existence Check:
-    if not os.path.exists(textfile):
-            print('The file:  %s does not exist. Program quitting' %(textfile))
+    base=os.path.basename(enc_item)
+    
+
+
+    if not os.path.exists(enc_item):
+            print('The file:  %s does not exist. Program quitting' %(enc_item))
         # if there is no such a file, the script will Quit
             SystemExit
-    elif not os.path.basename(textfile).startswith("enc_"):
-            click.echo("%s is not encryped by me. try to add enc_ as prefix" %str(textfile))
+    elif not os.path.basename(enc_item).startswith("enc_"):
+            click.echo("%s is not encryped by me. try to add enc_ as prefix" %str(enc_item))
             SystemExit
         # Or if there is such a file called `enc_X` this means the file is already encrypted. We dont want to encrypt it again. 
         #thus, exitting.
     else:
-        outputFile = os.path.join(os.path.dirname(textfile), os.path.basename(textfile[4:]))
-    #defining an output file
-    # the expected encrypted file is already named like enc_text.txt so the first 4 characters need to be removed.
-    #reversing from enc_X to X, to its original form.
         startTime=time.time()
-        with open(textfile, "rb") as textfile:
-            with open(outputFile, "wb") as outputfile:
-                outputfile.write(unlock.decrypt(textfile).rstrip())
-            print("Decryption of the given file" &str(textfile) + "is completed")
-            print("Please find your decrypted file enc_{} in the directory".format(textfile))                    
-            totaltime=round(time.time() - startTime)
-            print('Decryption time: %s seconds!' %(totaltime))
+        with open(enc_item, 'rb') as e:
+            encrypted_file=e.read()
+            decrypted_file=unlock.decrypt(encrypted_file)
+        
+            with open('decoded', 'wb') as d:
+                d.write(decrypted_file.rstrip(b'0'))
+                #os.path.join(d, ext)
+        print("Decryption of the given file {}  is completed" .format(enc_item))
+        totalTime=round(time.time() - startTime)
+        print('Decryption time: %s seconds!' %(totalTime))
 
-     # Ask user whether to keep the original file or to remove it after the decryption.:
-    if os.path.exists(outputFile):
-        print('Do you want to keep the original file,  %s? (Y)es or (N)o ?' %(outputFile))
-        response = input('> ')
+    if os.path.exists(base):
+        print('Do you want to keep the original file,  %s? (Y)es or (N)o ?' %(base))
+        response= input('>  ')
     if not response.lower().startswith('y'):
-        os.remove(outputFile)
+        os.remove(base)
     else:
         pass
+        
+        
 
-                
 
 if __name__ == "__main__":
     main()
-
-    
