@@ -1,4 +1,4 @@
-
+#
      / ___|  _ \ \ / /  _ \_   _/ _ \|  _ \ \ / /                  
     | |   | |_) \ V /| |_) || || | | | |_) \ V /                   
     | |___|  _ < | | |  __/ | || |_| |  __/ | |                    
@@ -27,7 +27,9 @@ The script also makes the verification check, whether the files exists or not an
       
 ## How to install?
  
-Easy: `pip install cryptopy-cli`
+Easy:
+
+`pip install cryptopy-cli`
 
 ## How to use?
 
