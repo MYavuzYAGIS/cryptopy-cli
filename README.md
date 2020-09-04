@@ -1,10 +1,9 @@
-# CRYPTOPY-CLI
 
      / ___|  _ \ \ / /  _ \_   _/ _ \|  _ \ \ / /                  
     | |   | |_) \ V /| |_) || || | | | |_) \ V /                   
     | |___|  _ < | | |  __/ | || |_| |  __/ | |                    
      \____|_| \_\|_| |_|    |_| \___/|_|    |_|                    
-
+#
 
 ## What is cryptopy-cli?
 `cryptopy-cli` is a command line interface (CLI) embedded encryption-decryption tool written in Python.
