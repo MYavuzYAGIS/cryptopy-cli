@@ -64,4 +64,4 @@ Easy:
 This is just the first version. The more muscular versions will arrive soon,hopefully.
 Enjoy and give me feedbacks!
 
--- M Yavuz YAGIS
+[M Yavuz YAGIS](https://twitter.com/MYavuzYagis)
