@@ -1,0 +1,14 @@
+language: python
+python:
+  -3.7
+  -3.8
+before_install:
+- python --version
+- pip install -U pip
+install:
+-pip install click
+-pip install termcolor
+-pip install pycryptodome
+-pip install pyfiglet
+script:
+python3 cryptopy.py
