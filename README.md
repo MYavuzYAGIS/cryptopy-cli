@@ -5,15 +5,68 @@
             | |___|  _ < | | |  __/ | || |_| |  __/ | |                    
              \____|_| \_\|_| |_|    |_| \___/|_|    |_|                    
 
-cryptopy is a CLI based encryption-decryption tool.
-Since it is using the click module, flags like --help etc are active.
-By definition, the tool has 2 options, encrypt and decrypt, and requires 2 parameters: 1- A file to be encrypted or decrypted 2- A keyword that works both sides of the action. So the user needs to give the same keyword for the actions on the same file.
-The program also asks to keep or remove the original file during encryption or the encrypted file during decryption.
-y || n will suffice.
-This is just the first version. The more muscular versions will arrive soon,hopefully. the script also makes the verification check, whether the files exists or not.
+
+**1)What is Cryptopy-cli?** 
+Cryptopy-cli is a Command line interface(CLI) embedded encryption-decryption tool written in Python.
+
+**2)What does it do?**
+  **1) Encryption:**
+      Accepts the file and a keyword- do not forget the keyword you used- reads the content of the file,
+      ecrypts the content with SHA256 and writes the encrypted content into the new file `enc_file`.
+      Asks the user whether to keep the original file or to remove it. If answer is to keep it, renames the file
+      `original_file`. `y` || `n` will suffice for making choices.
+      The script also makes the verification check, whether the files exists or not and calculates the duration of encryption.
+      
+      
+      =============
+      
+   ![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg)  
+      
+      
+      
+      AND AFTER THE ENCRYPTION:
+      
+      
+   ![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypted.png)  
+      
+      
+      
+   **2)Decryption:**
+       Accepts the file and the **same keyword you used when encrypting the file**. Once the inputs are given, the script
+       decrypts the file and copies the decrypted content to a file called `decoded`. 
+       Also upon exit, asks the user whether to keep the ecrypted file or not. `y` || `n` will suffice for making choices.
+       The script also makes the verification check, whether the files exists or not and calculates the duration of encryption.
+   
+      
+      
+      
+  ![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/decryption.png)  
+      
+      
+      
+      
+      
+      -----COMPARING THE ORIGINAL FILE AND THE DECODED FILE
+      
+  ![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/comparison.png)  
+      
+      
+      
+      
+**==================================================**
+
+
+
+
+
+
+
+
+
+
+
+This is just the first version. The more muscular versions will arrive soon,hopefully. t
 Use case example:
 cryptopy [encrypt||decrypt] /path/to/file/ keyword
 Enjoy and give me feedbacks! M Yavuz YAGIS
-Change Log
-1.0.0(03.09.2020)
--The first release.
+
