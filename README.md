@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/MYavuzYAGIS/cryptopy.svg?branch=master)](https://travis-ci.org/MYavuzYAGIS/cryptopy)
+
 
              / ___|  _ \ \ / /  _ \_   _/ _ \|  _ \ \ / /                  
             | |   | |_) \ V /| |_) || || | | | |_) \ V /                   
