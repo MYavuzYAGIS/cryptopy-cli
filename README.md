@@ -40,10 +40,10 @@ Easy:
 #### Decrypt a file:
 
 `cryptopy-cli [decrypt] [/path/to/file/] password`
-      
-<img src="https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg" width="600px"></img>
-
+  
 ### Screenshots
+
+<img src="https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg" width="600px"></img>
 
 **AND AFTER THE ENCRYPTION:**
      
