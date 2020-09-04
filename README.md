@@ -1,9 +1,9 @@
 
 
-             / ___|  _ \ \ / /  _ \_   _/ _ \|  _ \ \ / /                  
-            | |   | |_) \ V /| |_) || || | | | |_) \ V /                   
-            | |___|  _ < | | |  __/ | || |_| |  __/ | |                    
-             \____|_| \_\|_| |_|    |_| \___/|_|    |_|                    
+                                               / ___|  _ \ \ / /  _ \_   _/ _ \|  _ \ \ / /                  
+                                              | |   | |_) \ V /| |_) || || | | | |_) \ V /                   
+                                              | |___|  _ < | | |  __/ | || |_| |  __/ | |                    
+                                               \____|_| \_\|_| |_|    |_| \___/|_|    |_|                    
 
 
 **1)What is Cryptopy-cli?** 
@@ -17,6 +17,26 @@ Cryptopy-cli is a Command line interface(CLI) embedded encryption-decryption too
       `original_file`. `y` || `n` will suffice for making choices.
       The script also makes the verification check, whether the files exists or not and calculates the duration of encryption.
       
+      
+**3)How to Install?**
+ 
+        Easy: `pip install cryptopy-cli`
+
+**4)how to Use?**
+
+       Both encryption and decryption have similar use cases:
+       
+       on encryption:
+       
+       `cryptopy-cli [encrypt] [/path/to/file/] keyword`
+       
+       on decryption:
+        `cryptopy-cli [decrypt] [/path/to/file/] keyword`
+       
+
+
+
+
       
       =============
       
@@ -59,14 +79,7 @@ Cryptopy-cli is a Command line interface(CLI) embedded encryption-decryption too
 
 
 
+**A Friendly Disclaimer:**
 
-
-
-
-
-
-This is just the first version. The more muscular versions will arrive soon,hopefully. t
-Use case example:
-cryptopy [encrypt||decrypt] /path/to/file/ keyword
-Enjoy and give me feedbacks! M Yavuz YAGIS
-
+`This is just the first version. The more muscular versions will arrive soon,hopefully.
+Enjoy and give me feedbacks! M Yavuz YAGIS`
