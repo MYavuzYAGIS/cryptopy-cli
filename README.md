@@ -43,6 +43,8 @@ Easy:
       
 <img src="https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg" width="600px"></img>
 
+### Screenshots
+
 **AND AFTER THE ENCRYPTION:**
      
 <img src="https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypted.png" width="600px"></img>
