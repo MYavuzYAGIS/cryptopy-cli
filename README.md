@@ -32,11 +32,12 @@ Easy: `pip install cryptopy-cli`
 
 ### How to use?
 
-Encrypt a file:
+#### Encrypt a file:
 
 `cryptopy-cli [encrypt] [/path/to/file/] keyword`
 
-Decrypt a file:
+#### Decrypt a file:
+
 `cryptopy-cli [decrypt] [/path/to/file/] keyword`
       
 ![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg)  
