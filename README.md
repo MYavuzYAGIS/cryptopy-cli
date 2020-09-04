@@ -40,17 +40,17 @@ Easy: `pip install cryptopy-cli`
 
 `cryptopy-cli [decrypt] [/path/to/file/] keyword`
       
-![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg)  
+![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg | width=400)  
 
 AND AFTER THE ENCRYPTION:
      
-![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypted.png)  
+![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypted.png | width=400)  
   
-![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/decryption.png)  
+![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/decryption.png | width=400)  
       
 COMPARING THE ORIGINAL FILE AND THE DECODED FILE:
       
-![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/comparison.png)  
+![Image](https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/comparison.png | width=400)  
             
 ---
 
