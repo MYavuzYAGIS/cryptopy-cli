@@ -11,7 +11,7 @@
 ## What does it do?
 
 ### Encryption:
-Accepts the file and a password -**do not forget the passphrase you used**- reads the content of the file, encrypts the content with SHA256 and writes the encrypted content into the new file `enc_file`.
+Accepts the file and a password -**do not forget the password you used**- reads the content of the file, encrypts the content with SHA256 and writes the encrypted content into the new file `enc_file`.
 
 Asks the user whether to keep the original file or to remove it. If answer is to keep it, renames the file `original_file`. `y` || `n` will suffice for making choices.
 
@@ -19,7 +19,7 @@ The script also makes the verification check, whether the files exists or not an
 
 ### Decryption:
 
-Accepts the file and the **same keyword you used when encrypting the file**. Once the inputs are given, the script decrypts the file and copies the decrypted content to a file called `decoded`. 
+Accepts the file and the **same password you used when encrypting the file**. Once the inputs are given, the script decrypts the file and copies the decrypted content to a file called `decoded`. 
 
 Also upon exit, asks the user whether to keep the ecrypted file or not. `y` || `n` will suffice for making choices.
 
@@ -35,11 +35,11 @@ Easy:
 
 ### Encrypt a file:
 
-`cryptopy-cli [encrypt] [/path/to/file/] keyword`
+`cryptopy-cli [encrypt] [/path/to/file/] password`
 
 ### Decrypt a file:
 
-`cryptopy-cli [decrypt] [/path/to/file/] keyword`
+`cryptopy-cli [decrypt] [/path/to/file/] password`
       
 <img src="https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/encrypt.jpg" width="600px"></img>
 
