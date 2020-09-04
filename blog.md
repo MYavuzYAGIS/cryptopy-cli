@@ -1,3 +1,12 @@
+
+
+ ![Image]https://github.com/MYavuzYAGIS/cryptopy/blob/master/img/m-209-1291-banner.jpg)
+ 
+
+ 
+ 
+
+
 Julius Caesar had to lead his army in the deep dark Germanic forests. The path was dark and spooky for the messenger
 who carried the message. Few times the Barbaric tribesmen had caught the `script` and read the content. Caesar
 needed to find a way to guarantee the safe delivery of the message. Even if the `script` is
@@ -33,4 +42,12 @@ I hear you interested. hm. Lets go to https encrypted website `https://github.co
 
 
 See you there! Ahoy!
+
+
 M.Yavuz YAGIS
+
+
+
+
+
+Image Source:`https://www.google.com/url?sa=i&url=https%3A%2F%2Fcromwell-intl.com%2Fcybersecurity%2Fcrypto%2F&psig=AOvVaw2I8ymGpuOkaQS7gGFStNs3&ust=1599302530797000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNi807Coz-sCFQAAAAAdAAAAABAD`
